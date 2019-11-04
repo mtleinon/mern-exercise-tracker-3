@@ -21,6 +21,7 @@ export default function ExercisesList() {
   useEffect(() => {
     Axios.get(backendUrl + '/exercises/')
       .then(response => {
+        console.log('response.data =', response.data);
         setExercises(response.data)
       });
   }, []);

@@ -4,7 +4,7 @@ import axios from 'axios';
 import { backendUrl } from '../settings';
 import "react-datepicker/dist/react-datepicker.css";
 
-export default function CreateExercise() {
+export default function CreateExercise(props) {
   const [username, setUsername] = useState("");
   const [users, setUsers] = useState([]);
   const [description, setDescription] = useState("");
@@ -18,7 +18,7 @@ export default function CreateExercise() {
       .then(response => {
         if (response.data.length > 0) {
           setUsers(response.data.map(user => user.username));
-          setUsername(response.data[0]);
+          setUsername(response.data[0].username);
         }
       });
   }, []);
@@ -33,9 +33,8 @@ export default function CreateExercise() {
     };
     axios.post(backendUrl + '/exercises/add', exercise)
       .then(res => console.log('res.data', res.data));
-
+    props.history.push('/')
     console.log('exercise =', exercise);
-    window.location = '/';
   }
 
   return (

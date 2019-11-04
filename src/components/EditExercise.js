@@ -45,7 +45,6 @@ export default function EditExercise(props) {
       .then(res => console.log('res.data', res.data));
     console.log('update =', backendUrl + '/exercises/update/' + props.match.params.id);
     console.log('exercise =', exercise);
-    window.location = '/';
   }
 
   return (
