@@ -43,6 +43,8 @@ export default function EditExercise(props) {
     };
     axios.post(backendUrl + '/exercises/update/' + props.match.params.id, exercise)
       .then(res => console.log('res.data', res.data));
+    props.history.push('/');
+
     console.log('update =', backendUrl + '/exercises/update/' + props.match.params.id);
     console.log('exercise =', exercise);
   }

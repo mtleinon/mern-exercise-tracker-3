@@ -33,7 +33,7 @@ export default function CreateExercise(props) {
     };
     axios.post(backendUrl + '/exercises/add', exercise)
       .then(res => console.log('res.data', res.data));
-    props.history.push('/')
+    props.history.push('/');
     console.log('exercise =', exercise);
   }
 
