@@ -1,0 +1,58 @@
+POST /users/add HTTP/1.1
+Host: localhost:5000
+Content-Type: application/json
+cache-control: no-cache
+Postman-Token: f972e14d-8ea0-4921-8934-ef7bb5f47f15
+
+{
+    "username": "beau3"
+}
+
+###
+POST http://localhost:5000/users/add HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "bob"
+}
+
+###
+GET http://localhost:5000/users/ HTTP/1.1
+
+###
+GET https://mern-exercise-tracker-mika.herokuapp.com/users/ HTTP/1.1
+
+###
+GET https://mern-exercise-tracker-mika.herokuapp.com/exercises/ HTTP/1.1
+
+###
+POST http://localhost:5000/exercises/add HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "bill",
+    "description": "swim",
+    "duration": 45,
+    "date": "2019-05-29T02:22:49.052Z"
+}
+
+###
+GET http://localhost:5000/exercises/ HTTP/1.1
+
+###
+GET http://localhost:5000/exercises/5dbeb4622492988bac5f33d0 HTTP/1.1
+
+
+###
+POST http://localhost:5000/exercises/update/5dbeb4622492988bac5f33d0 HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "bill",
+    "description": "walk",
+    "duration": 120,
+    "date": "2019-05-29T02:22:49.052Z"
+}
+
+###
+DELETE http://localhost:5000/exercises/5dbeb4622492988bac5f33d0 HTTP/1.1
