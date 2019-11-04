@@ -1,2 +1,2 @@
-export const backendUrl = "https://mern-exercise-tracker-mika.herokuapp.com";
+export const backendUrl = "https://exercise-tracker-mika-3.herokuapp.com";
 // export const backendUrl = 'http://localhost:5000';
