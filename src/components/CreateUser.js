@@ -1,13 +1,15 @@
 import React, { useState } from 'react'
 import axios from 'axios';
 import "react-datepicker/dist/react-datepicker.css";
+import { backendUrl } from '../settings';
+
 export default function CreateExercise() {
   const [username, setUsername] = useState("");
 
   const onSubmit = (e) => {
     e.preventDefault();
     console.log('username =', username);
-    axios.post('http://localhost:5000/users/add', { username })
+    axios.post(backendUrl + '/users/add', { username })
       .then(res => console.log('res.data', res.data));
 
     setUsername('');

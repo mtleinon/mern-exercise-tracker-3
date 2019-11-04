@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import DatePicker from 'react-datepicker';
 import axios from 'axios';
+import { backendUrl } from '../settings';
 
 import "react-datepicker/dist/react-datepicker.css";
 
@@ -14,7 +15,7 @@ export default function EditExercise(props) {
   const userSelection = useRef();
 
   useEffect(() => {
-    axios.get('http://localhost:5000/exercises/'
+    axios.get(backendUrl + '/exercises/'
       + props.match.params.id)
       .then(response => {
         setUsername(response.data.username);
@@ -24,7 +25,7 @@ export default function EditExercise(props) {
       }
       );
 
-    axios.get('http://localhost:5000/users/')
+    axios.get(backendUrl + '/users/')
       .then(response => {
         if (response.data.length > 0) {
           setUsers(response.data.map(user => user.username));
@@ -40,9 +41,9 @@ export default function EditExercise(props) {
       duration,
       date
     };
-    axios.post('http://localhost:5000/exercises/update/' + props.match.params.id, exercise)
+    axios.post(backendUrl + '/exercises/update/' + props.match.params.id, exercise)
       .then(res => console.log('res.data', res.data));
-
+    console.log('update =', backendUrl + '/exercises/update/' + props.match.params.id);
     console.log('exercise =', exercise);
     window.location = '/';
   }

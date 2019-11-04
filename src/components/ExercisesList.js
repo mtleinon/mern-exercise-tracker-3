@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Axios from 'axios';
 import { Link } from 'react-router-dom';
+import { backendUrl } from '../settings';
 
 const Exercise = props => (
   <tr>
@@ -18,14 +19,14 @@ export default function ExercisesList() {
   const [exercises, setExercises] = useState([]);
 
   useEffect(() => {
-    Axios.get('http://localhost:5000/exercises/')
+    Axios.get(backendUrl + '/exercises/')
       .then(response => {
         setExercises(response.data)
       });
   }, []);
 
   const deleteExercise = (id) => {
-    Axios.delete('http://localhost:5000/exercises/' + id)
+    Axios.delete(backendUrl + '/exercises/' + id)
       .then(res => console.log('delete exercise', res.data));
 
     setExercises(current => current.filter(el => el._id !== id));
