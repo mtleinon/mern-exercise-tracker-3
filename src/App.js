@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import Navbar from './components/Navbar.js';
@@ -9,7 +9,7 @@ import CreateExercise from './components/CreateExercise';
 import CreateUser from './components/CreateUser';
 function App() {
   return (
-    <Router>
+    <BrowserRouter basename="/mern-exercise-tracker-3/" >
       <div className="container">
         <Navbar />
         <br />
@@ -18,7 +18,7 @@ function App() {
         <Route path="/create" component={CreateExercise} />
         <Route path="/user" component={CreateUser} />
       </div>
-    </Router>
+    </BrowserRouter >
   );
 }
 
