@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/mern-exercise-tracker-3/static/js/main.3b48ae33.chunk.js",
-    "main.js.map": "/mern-exercise-tracker-3/static/js/main.3b48ae33.chunk.js.map",
+    "main.js": "/mern-exercise-tracker-3/static/js/main.eb0e4770.chunk.js",
+    "main.js.map": "/mern-exercise-tracker-3/static/js/main.eb0e4770.chunk.js.map",
     "runtime-main.js": "/mern-exercise-tracker-3/static/js/runtime-main.d200e2e7.js",
     "runtime-main.js.map": "/mern-exercise-tracker-3/static/js/runtime-main.d200e2e7.js.map",
     "static/css/2.7d576c58.chunk.css": "/mern-exercise-tracker-3/static/css/2.7d576c58.chunk.css",
     "static/js/2.ab32f552.chunk.js": "/mern-exercise-tracker-3/static/js/2.ab32f552.chunk.js",
     "static/js/2.ab32f552.chunk.js.map": "/mern-exercise-tracker-3/static/js/2.ab32f552.chunk.js.map",
     "index.html": "/mern-exercise-tracker-3/index.html",
-    "precache-manifest.3f0d908a3e84e6ef391a77167e1e7af4.js": "/mern-exercise-tracker-3/precache-manifest.3f0d908a3e84e6ef391a77167e1e7af4.js",
+    "precache-manifest.9782fe04565876bb8a79299619e357ce.js": "/mern-exercise-tracker-3/precache-manifest.9782fe04565876bb8a79299619e357ce.js",
     "service-worker.js": "/mern-exercise-tracker-3/service-worker.js",
     "static/css/2.7d576c58.chunk.css.map": "/mern-exercise-tracker-3/static/css/2.7d576c58.chunk.css.map"
   },
@@ -16,6 +16,6 @@
     "static/js/runtime-main.d200e2e7.js",
     "static/css/2.7d576c58.chunk.css",
     "static/js/2.ab32f552.chunk.js",
-    "static/js/main.3b48ae33.chunk.js"
+    "static/js/main.eb0e4770.chunk.js"
   ]
 }
